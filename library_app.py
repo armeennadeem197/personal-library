@@ -2,15 +2,9 @@ import streamlit as st
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 import pandas as pd
-from dotenv import load_dotenv
-import os
 
-# Load environment variables
-load_dotenv()
-MONGO_URI = os.getenv("MONGO_URI")
-
-# Connect to MongoDB
-client = MongoClient(MONGO_URI)
+# MongoDB connection (no .env file used)
+client = MongoClient("mongodb+srv://armeennadeem9:mpB5V0TJH11LFg9f@cluster0.te5qatu.mongodb.net/?retryWrites=true&w=majority")
 db = client["library"]
 books_collection = db["books"]
 
@@ -199,7 +193,6 @@ def statistics_page():
     st.metric("Read Books", read)
     st.metric("Unread Books", unread)
 
-    # Chart
     chart_data = pd.DataFrame({
         "Status": ["Read", "Unread"],
         "Count": [read, unread]
