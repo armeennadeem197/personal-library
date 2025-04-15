@@ -31,10 +31,10 @@ A stylish and user-friendly **Streamlit** app to manage your personal book colle
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/library-manager.git
-cd library-manager
+https://github.com/armeennadeem197/personal-library.git
 ```
 2. Install Dependencies
+  ```
 3. pip install streamlit pymongo pandas
 
 ```
@@ -42,9 +42,11 @@ cd library-manager
 streamlit run library
 ```
 🔐 MongoDB Setup
+```
 This project uses MongoDB Atlas. Update the connection string in your code:
-
+````
 client = MongoClient("your_mongodb_connection_string")
+```
 Ensure your cluster is accessible and your IP is whitelisted.
 
 ```
