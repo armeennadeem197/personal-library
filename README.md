@@ -44,9 +44,7 @@ streamlit run library
 🔐 MongoDB Setup
 ```
 This project uses MongoDB Atlas. Update the connection string in your code:
-````
 client = MongoClient("your_mongodb_connection_string")
-```
 Ensure your cluster is accessible and your IP is whitelisted.
 
 ```
